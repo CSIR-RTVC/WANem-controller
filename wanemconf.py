@@ -100,7 +100,7 @@ with open(sys.argv[2],"wb") as outf:			# Write to csv file
     for di in parmlist:
         writer.writerow(di)
 		
-print "Output configuration:"
+print "\nOutput configuration:"
 with open(sys.argv[2],"rb") as outf:			# Read out csv file
 	outc = outf.readlines()
 	for l in outc:
