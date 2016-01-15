@@ -9,6 +9,7 @@ import sys
 
 dkey = {	"packetlimit"	:	"txtLimit",
 	 	"symmetrical"	:	"selSym",
+		"bandwidthtype"	:	"txtBandwidthAuto",
 	 	"bandwidth"	:	"txtBandwidth",
 	 	"delay" 	:	"txtDelay",
 	 	"loss"		:	"txtLoss",
@@ -50,7 +51,9 @@ with open(sys.argv[1],'rb') as inf:
 			cl[3] = [ ]
 		
 		if cl[3]:
-			cl[3] = cl[3].split(';')
+			if "bandwidth" in cl[3]:
+				cl[3] = cl[3] + ";bandwidthtype=Other" # forcefully add Other because it is overriden for special values
+ 			cl[3] = cl[3].split(';')
 			# Split and validate the line 
 			for part in range(len(cl[3])):
 				cl[3][part] = cl[3][part].split("=")
