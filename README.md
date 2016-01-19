@@ -12,6 +12,7 @@ WANem controller is a two part system
 Requirements:
 
   *python-2.7:* or high except python3
+  
   *mechanize:* install using "easy_install mechanize"
 
 Usage:
