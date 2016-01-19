@@ -1,0 +1,5 @@
+time,interface,subconfig,txtBandwidth,txtBandwidthAuto
+0,eth0,1,10240,Other
+1,command,ssh 146.64.5.31 stdbuf -o0 iperf3 -c 192.168.10.3 -i 0.5 -t 15&,,
+5,eth0,1,1024,Other
+10,eth0,1,10240,Other
